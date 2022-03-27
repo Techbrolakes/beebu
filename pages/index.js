@@ -1,8 +1,14 @@
-import React from "react";
-import { FaBeer, FaBars } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaBars } from "react-icons/fa";
+import { RiMoonClearFill, RiSunFill } from "react-icons/ri";
 import Head from "next/head";
 
 export default function Home() {
+  const [colorScheme, setcolorScheme] = useState(true);
+
+  const handleColorScheme = () => {
+    setcolorScheme(!colorScheme);
+  };
   return (
     <div>
       <Head>
@@ -11,7 +17,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className="bg-dark min-h-screen text-white">
+      <section
+        className={
+          colorScheme
+            ? "bg-dark min-h-screen text-white"
+            : "bg-[#EEEEEE] min-h-screen text-black"
+        }
+      >
         <div className="flex items-center justify-between px-8 py-4">
           <h1 className="text-4xl">Beebu Imprint</h1>
           <ul className="hidden md:flex md:gap-12">
@@ -20,20 +32,51 @@ export default function Home() {
             <li className="cursor-pointer">Services</li>
             <li className="cursor-pointer">Contact</li>
           </ul>
-          <a
-            href="#"
-            className="bg-beebu hover:bg-amber-400 text-black text-center py-2 px-4 rounded text-lg hidden md:block"
-          >
-            Book Session
-          </a>
-          <FaBars size="32px" className="md:hidden" />
+          <div className="flex items-center gap-4">
+            <a
+              href="#"
+              className={
+                colorScheme
+                  ? "bg-beebu hidden md:block  hover:bg-amber-400 text-black text-center py-2 px-4 rounded text-lg"
+                  : "bg-black hidden md:block hover:bg-gray-700 text-white text-center py-2 px-4 rounded text-lg"
+              }
+            >
+              Book Session
+            </a>
+            <FaBars size="32px" className="md:hidden" />
+            <button>
+              {colorScheme ? (
+                <RiMoonClearFill
+                  size="32px"
+                  className="beebu cursor-pointer"
+                  onClick={handleColorScheme}
+                />
+              ) : (
+                <RiSunFill
+                  size="32px"
+                  className="beebu cursor-pointer"
+                  onClick={handleColorScheme}
+                />
+              )}
+            </button>
+          </div>
         </div>
 
-        <article className="bg-[url('/bg.png')] bg-center bg-cover bg-no-repeat py-8">
+        <article
+          className={
+            colorScheme
+              ? "bg-[url('/bg.png')] bg-center bg-cover bg-no-repeat py-8"
+              : "bg-[url('/bgGG.png')] bg-center bg-cover bg-no-repeat py-8"
+          }
+        >
           <div className="my-14 text-center w-[90%] md:w-3/5 mx-auto">
             <h1 className=" text-4xl md:text-6xl ">
               Beebu&rsquo;s Imprint the Best plug for all your
-              <span className="text-beebu"> printing </span>needs
+              <span className={colorScheme ? "text-beebu" : "text-black"}>
+                {" "}
+                printing{" "}
+              </span>
+              needs
             </h1>
             <p className="my-4 text-sm md:text-lg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
@@ -45,7 +88,11 @@ export default function Home() {
             </p>
             <a
               href="#"
-              className="bg-beebu hover:bg-amber-400 text-black text-center py-2 px-4 rounded text-lg"
+              className={
+                colorScheme
+                  ? "bg-beebu hover:bg-amber-400 text-black text-center py-2 px-4 rounded text-lg"
+                  : "bg-black hover:bg-gray-700 text-white text-center py-2 px-4 rounded text-lg"
+              }
             >
               Book Session
             </a>
