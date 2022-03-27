@@ -22,7 +22,7 @@ export default function Home() {
           </ul>
           <a
             href="#"
-            class="bg-beebu hover:bg-amber-400 text-black text-center py-2 px-4 rounded text-lg hidden md:block"
+            className="bg-beebu hover:bg-amber-400 text-black text-center py-2 px-4 rounded text-lg hidden md:block"
           >
             Book Session
           </a>
@@ -45,7 +45,7 @@ export default function Home() {
             </p>
             <a
               href="#"
-              class="bg-beebu hover:bg-amber-400 text-black text-center py-2 px-4 rounded text-lg"
+              className="bg-beebu hover:bg-amber-400 text-black text-center py-2 px-4 rounded text-lg"
             >
               Book Session
             </a>
