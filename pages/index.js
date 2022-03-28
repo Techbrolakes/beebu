@@ -24,7 +24,7 @@ export default function Home() {
       <section
         className={
           colorScheme
-            ? "bg-dark min-h-screen text-white"
+            ? "bg-[#05082B] min-h-screen text-white"
             : "bg-[#EEEEEE] min-h-screen text-black"
         }
       >
