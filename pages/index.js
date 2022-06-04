@@ -181,6 +181,7 @@ export default function Home() {
             <a
               href="https://www.facebook.com/Beebus_Imprint-106387411538481"
               target="_blank"
+              rel="noreferrer"
             >
               <span className="text-4xl cursor-pointer">
                 <FaFacebookSquare />
