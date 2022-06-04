@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
+import { FaFacebookSquare, FaTwitterSquare } from "react-icons/fa";
 import { RiMoonClearFill, RiSunFill } from "react-icons/ri";
+import Project from "./components/Project";
 import Head from "next/head";
 
 export default function Home() {
@@ -28,12 +31,20 @@ export default function Home() {
             : "bg-[#EEEEEE] min-h-screen text-black"
         }
       >
-        <div className="flex items-center justify-between px-8 py-4">
-          <h1 className="text-4xl">Beebu Imprint</h1>
+        <div id="nav" className="flex items-center justify-between px-8 py-4">
+          <img
+            src="/logo.png"
+            alt="logo"
+            className="w-1/4 lg:w-[8%] animate-pulse "
+          />{" "}
           <ul className="hidden md:flex md:gap-12">
-            <li className="cursor-pointer">Home</li>
+            <a href="#nav">
+              <li className="cursor-pointer">Home</li>
+            </a>
             <li className="cursor-pointer">About</li>
-            <li className="cursor-pointer">Services</li>
+            <a href="#service">
+              <li className="cursor-pointer">Services</li>
+            </a>
             <li className="cursor-pointer">Contact</li>
           </ul>
           <div className="flex items-center gap-4">
@@ -45,7 +56,7 @@ export default function Home() {
                   : "bg-black hidden md:block hover:bg-gray-700 text-white text-center py-2 px-4 rounded text-lg"
               }
             >
-              Book Session
+              Place Booking
             </a>
             {nav ? (
               <FaBars
@@ -89,21 +100,18 @@ export default function Home() {
             >
               <div className="my-14 text-center w-[90%] md:w-3/5 mx-auto">
                 <h1 className=" text-4xl md:text-6xl ">
-                  Beebu&rsquo;s Imprint the Best plug for all your
+                  Beebu&rsquo;s Imprint The digital print & sign shop at your{" "}
+                  <br />
                   <span className={colorScheme ? "text-beebu" : "text-black"}>
-                    {" "}
-                    printing{" "}
+                    convenience
                   </span>
-                  needs
                 </h1>
                 <p className="my-4 text-sm md:text-lg">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                  aliquam, purus sit amet luctus venenatis, lectus magna
-                  fringilla urna, porttitor rhoncus dolor purus non enim
-                  praesent elementum facilisis leo, vel fringilla est
-                  ullamcorper eget nulla facilisi etiam dignissim diam quis enim
-                  lobortis scelerisque fermentum dui faucibus in ornare quam
-                  viverra
+                  The Bird Symbolizes peace and happiness. so it can be seen in
+                  compositions related to the comfort clients tends to derive
+                  while dealing with us. At the same time, predatory
+                  representative which serve as a symbol of strength and
+                  purposefulness in all creative projects of the company
                 </p>
                 <a
                   href="#"
@@ -113,7 +121,7 @@ export default function Home() {
                       : "bg-black hover:bg-gray-700 text-white text-center py-2 px-4 rounded text-lg"
                   }
                 >
-                  Book Session
+                  Place Booking
                 </a>
               </div>
             </article>
@@ -123,7 +131,9 @@ export default function Home() {
             <ul className="flex flex-col items-center gap-16">
               <li className="cursor-pointer text-xl">Home</li>
               <li className="cursor-pointer text-xl">About</li>
-              <li className="cursor-pointer text-xl">Services</li>
+              <a href="#service">
+                <li className="cursor-pointer text-xl">Services</li>
+              </a>
               <li className="cursor-pointer text-xl">Contact</li>
               <a
                 href="#"
@@ -138,6 +148,46 @@ export default function Home() {
             </ul>
           </div>
         )}
+
+        <div className="container mx-auto py-28" id="service">
+          <h1 className="text-6xl py-4 text-center">Services we offer</h1>
+          <section className="flex flex-wrap justify-center gap-4">
+            <Project img="/p1.jpg" service="Printing on Nylons" />
+            <Project img="/p2.jpg" service="Indoor Signages" />
+            <Project img="/p3.jpg" service="Printing on Clothes" />
+            <Project img="/p4.jpg" service="Offset Printing" />
+            <Project img="/p5.jpg" service="Offset Printing" />
+            <Project img="/p6.jpg" service="Offset Printing" />
+          </section>
+        </div>
+
+        <div className="container text-center mx-auto space-y-4 px-8">
+          <h1 className="text-6xl py-4 text-center">Contact Us</h1>
+          <p className="text-lg lg:text-xl">
+            The Bird Symbolizes peace and happiness. so it can be seen in
+            compositions related to the comfort clients tends to derive while
+            dealing with us. At the same time, predatory representative which
+            serve as a symbol of strength and purposefulness in all creative
+            projects of the company
+          </p>
+
+          <section className="flex justify-center gap-8">
+            <span className="text-4xl cursor-pointer">
+              <BsInstagram />
+            </span>
+            <span className="text-4xl cursor-pointer">
+              <FaTwitterSquare />
+            </span>
+            <a
+              href="https://www.facebook.com/Beebus_Imprint-106387411538481"
+              target="_blank"
+            >
+              <span className="text-4xl cursor-pointer">
+                <FaFacebookSquare />
+              </span>
+            </a>
+          </section>
+        </div>
       </section>
     </div>
   );
