@@ -200,7 +200,7 @@ export default function Home() {
               <a
                 href="https://instagram.com/beebu__imprint?igshid=YmMyMTA2M2Y="
                 target="_blank"
-                rel="nonreferrer"
+                rel="noreferrer"
               >
                 <span className="text-4xl cursor-pointer">
                   <BsInstagram />
@@ -210,7 +210,7 @@ export default function Home() {
               <a
                 href="https://twitter.com/beebu_imprint?t=3ryFG5ak2l5JKmX6U1Lbyw&s=09"
                 target="_blank"
-                rel="nonreferrer"
+                rel="noreferrer"
               >
                 <span className="text-4xl cursor-pointer">
                   <FaTwitterSquare />
