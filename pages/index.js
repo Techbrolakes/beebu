@@ -6,6 +6,7 @@ import { RiMoonClearFill, RiSunFill } from "react-icons/ri";
 import Project from "./components/Project";
 import Head from "next/head";
 import Loader from "./components/Loader";
+import MyModal from "./components/Modal";
 
 export default function Home() {
   const [colorScheme, setcolorScheme] = useState(true);
@@ -228,6 +229,11 @@ export default function Home() {
               </a>
             </section>
           </div>
+          <img
+            src="/flyer.jpg"
+            className="mx-auto rounded-lg shadow-md w-1/3 py-4"
+            alt="flyer"
+          />
         </section>
       )}
     </div>
