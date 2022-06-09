@@ -64,7 +64,7 @@ export default function Home() {
             </ul>
             <div className="flex items-center gap-4">
               <a
-                href="https://instagram.com/beebu__imprint?igshid=YmMyMTA2M2Y="
+                href="https://wa.me/+2348178476340?text=Hi,%20Beebu_imprints%20"
                 target="_blank"
                 rel="noreferrer"
                 className={
@@ -131,7 +131,7 @@ export default function Home() {
                     purposefulness in all creative projects of the company
                   </p>
                   <a
-                    href="https://instagram.com/beebu__imprint?igshid=YmMyMTA2M2Y="
+                    href="https://wa.me/+2348178476340?text=Hi,%20Beebu_imprints%20"
                     target="_blank"
                     rel="noreferrer"
                     className={
@@ -153,16 +153,20 @@ export default function Home() {
                 <a href="#service">
                   <li className="cursor-pointer text-xl">Services</li>
                 </a>
-                <li className="cursor-pointer text-xl">Contact</li>
+                <a href="#contact">
+                  <li className="cursor-pointer text-xl">Contact</li>
+                </a>
                 <a
-                  href="#"
+                  href="https://wa.me/+2348178476340?text=Hi,%20Beebu_imprints%20"
+                  target="_blank"
+                  rel="noreferrer"
                   className={
                     colorScheme
                       ? "bg-beebu hover:bg-amber-400 text-black text-center py-2 px-4 rounded text-lg"
                       : "bg-black hover:bg-gray-700 text-white text-center py-2 px-4 rounded text-lg"
                   }
                 >
-                  Book Session
+                  Place Booking
                 </a>
               </ul>
             </div>
